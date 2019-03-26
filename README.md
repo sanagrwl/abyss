@@ -24,21 +24,22 @@ Thanks to [clj-cctray](https://github.com/build-canaries/clj-cctray)
 	5.  Circle
 	6.  Team City
 
-### Setup without server side config
+### Starting the app using jar
+	1. Download the standalone jar from releases.
+	2. ```java - jar abyss-1.0.0-standalone.jar```
+
+### Starting the app using docker
+Sample [Dockerfile](https://github.com/sanagrwl/abyss/blob/master/Dockerfile)
+
+	1. Build the app using `lein ring uberjar` or download the standalone jar in `target` directory. 
+	2. docker build -t abyss:latest .
+
+### Starting the app use code
 
 	1. lein ring server
 	2. launch browser at <hostname>:3000
 
 	Since the config is UI based, different teams have full control over their configuration. 
-
-### Setup with server side config
-
-	1. Copy config.json.sample to config.json under resources/config.
-	2. Set url, include/exclude regex.
-	2. lein ring server
-	3. launch browser at <hostname>:3000
-
-	You cannot override cctray url. You can still do custom include/exclude from browser.
 
 ### Sounds
 
@@ -49,7 +50,7 @@ Sounds are played on 2 different events.
 
 To have your custom sounds available:
 
-	1. Copy your audio file(s) in sounds folder. No need to restart the server.
+	1. Copy your audio file(s) in `sounds` folder or provide `-DsoundsDir=<path-to-sounds-dir>`. No need to restart the server.
 	2. Reload the page.
 	3. Select audio in controls.
 

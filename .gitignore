@@ -1,0 +1,10 @@
+target/
+*.iws
+*.ipr
+*.iml
+.lein*
+.idea/
+.nrep*
+resources/*.xml
+config.json
+videos

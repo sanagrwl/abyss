@@ -152,13 +152,13 @@
   (let [c (config-from-file)]
 
     (view-layout title
-                 [:div {:id "interface" :class "hover-effect"}
-                  [:button {:id "config"} "config"]]
+                 [:div {:id "interface"}
+                  [:button {:id "config" :class "fas fa-cogs"}]]
 
                  (config-section c)
 
-                 [:div {:id "preferences-control" :class "hover-effect"}
-                  [:button {:id "preferences-control-btn"} "controls"]]
+                 [:div {:id "preferences-control"}
+                  [:button {:id "preferences-control-btn" :class "fas fa-user-cog"}]]
 
                  [:div {:id "container"}]
 

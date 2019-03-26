@@ -8,8 +8,9 @@
 
    [:title title]
 
+   [:link {:rel "stylesheet" :type "text/css" :href "https://use.fontawesome.com/releases/v5.8.1/css/all.css"}]
    [:link {:rel "stylesheet" :type "text/css" :href "/css/base.css"}]])
-
+  
 (defn view-layout [title & content]
   (html
     (head title)
